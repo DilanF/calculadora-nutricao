@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC e TMB</title>
+    <link rel="shortcut icon" href="icons8-calculadora-48.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-imc">
+        <h2>Cálculadora IMC:</h2>
+        <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+        <div class="data-input">
+            <label for="data-metros">Digite sua altura:</label>
+            <input type="number" placeholder="Metros" min="0" max="2.51" step=".01" id="data-metros">
+            <label for="data-quilos">Digite seu peso:</label>
+            <input type="number" placeholder="Quilos" min="0" max="600" step=".01" id="data-quilos">
+            <button calcular-imc>Calcular</button>
+        </div>
+        <h3>Resultado:</h3>
+        <h4 id="resultado-imc"></h4>
+    </div>
+    <div class="container-tmb">
+        <h2>Calculadora Taxa metabólica basal:</h2>
+        <p>A taxa de metabolismo basal (TMB) indica a quantidade de calorias que o corpo necessita para realizar funções metabólicas básicas.
+            A Organização Mundial de Saúde criou uma fórmula para estimar a taxa metabólica basal de acordo com a idade e o sexo.
+        </p>
+        <div class="data-input">
+            <div class="data-sexo">
+                <p>Sexo:</p>
+                <input type="radio" id="data-sexo-m" name="type-s">
+                <label for="data-sexo-m">Masculino</label>
+                <br>
+                <input type="radio" id="data-sexo-f" name="type-s">
+                <label for="data-sexo-f">Feminino</label>
+                <br>
+                <input type="radio" id="data-sexo-f" name="type-s">
+                <label for="data-sexo-f">Feminino</label>
+                <br>
+                <input type="radio" id="data-sexo-f" name="type-s">
+                <label for="data-sexo-f">Feminino</label>
+            </div>
+            <label for="data-idade">Idade:</label>
+            <input type="number" placeholder="Anos" id="data-idade">
+            <label for="data-quilos">Digite seu peso:</label>
+            <input type="number" placeholder="Quilos" id="data-quilos">
+            <button>Calcular</button>
+        </div>
+    </div>
+    <footer><p>Calculadoras usadas apenas para ter um valor aproximado, sempre consulte um profissional!</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
