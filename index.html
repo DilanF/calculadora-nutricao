@@ -27,30 +27,49 @@
         <h4 id="resultado-imc"></h4>
     </div>
     <div class="container-tmb">
-        <h2>Calculadora Taxa metabólica basal:</h2>
-        <p>A taxa de metabolismo basal (TMB) indica a quantidade de calorias que o corpo necessita para realizar funções metabólicas básicas.
-            A Organização Mundial de Saúde criou uma fórmula para estimar a taxa metabólica basal de acordo com a idade e o sexo.
+        <h2>Calculado de Necessidades Energéticas</h2>
+        <p>Para um cálculo preciso, necessitamos de algumas informações básicas sobre você.
         </p>
-        <div class="data-input">
-            <div class="data-sexo">
-                <p>Sexo:</p>
-                <input type="radio" id="data-sexo-m" name="type-s">
-                <label for="data-sexo-m">Masculino</label>
-                <br>
-                <input type="radio" id="data-sexo-f" name="type-s">
-                <label for="data-sexo-f">Feminino</label>
-                <br>
-                <input type="radio" id="data-sexo-f" name="type-s">
-                <label for="data-sexo-f">Feminino</label>
-                <br>
-                <input type="radio" id="data-sexo-f" name="type-s">
-                <label for="data-sexo-f">Feminino</label>
+        <div class="input-cne">
+            <div class="idade-sexo">
+                <div class="idade">
+                    <label for="data-idade">Idade:</label>
+                    <input type="number" placeholder="Anos" min="0" max="130" id="data-idade">
+                </div>
+                <div class="sexo">
+                    <div class="opcoes-sexo">
+                        <label for="sexo">Sexo:</label>
+                        <select name="sexo" id="sexo">
+                            <option value="selecione">Selecione:</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <label for="data-idade">Idade:</label>
-            <input type="number" placeholder="Anos" id="data-idade">
-            <label for="data-quilos">Digite seu peso:</label>
-            <input type="number" placeholder="Quilos" id="data-quilos">
-            <button>Calcular</button>
+            <div class="peso-altura">
+                <div class="peso">
+                    <label for="quilos">Digite seu peso:</label>
+                    <input type="number" placeholder="Quilos" min="0" max="600" step=".01" id="quilos">
+                </div>
+                <div class="altura">
+                    <label for="metros">Digite sua altura:</label>
+                    <input type="number" placeholder="Metros" min="0" max="2.51" step=".01" id="metros">
+                </div>
+            </div>
+            <div class="atividade">
+                <label for="atividade">Nivel de atividade fisica:</label>
+                <select name="atividade-fisica" id="atividade">
+                    <option value="selecione">Selecione:</option>
+                    <option value="sedentatio">Sedentário</option>
+                    <option value="leve">Leve</option>
+                    <option value="moderado">Moderado</option>
+                    <option value="Intenso">Intenso</option>
+                </select>
+            </div>
+            <button id="botao-cne">Calcular</button>
+            <h3>Resultado:</h3>
+            <h4 id="resultado-cne"></h4>
         </div>
     </div>
     <footer><p>Calculadoras usadas apenas para ter um valor aproximado, sempre consulte um profissional!</p></footer>
