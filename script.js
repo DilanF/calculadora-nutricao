@@ -5,12 +5,12 @@ function validar() {
     quilos.style.border = "1px solid #eee"
     if (!metros.value || !quilos.value) {
         if (!metros.value && !quilos.value) {
-            metros.style.border = "1px solid red"
-            quilos.style.border = "1px solid red"
+            tremerMetros()
+            tremerQuilos()
         } else if (!metros.value) {
-            metros.style.border = "1px solid red"
+            tremerMetros()
         } else {
-            quilos.style.border = "1px solid red"
+            tremerQuilos()
         }
     } else {
         calcularIMC()
@@ -19,18 +19,16 @@ function validar() {
 
 function calcularIMC () {
     let metros = parseFloat(document.getElementById('data-metros').value)
-    let metrosInput = document.getElementById('data-metros')
     let quilos = parseFloat(document.getElementById('data-quilos').value)
-    let quilosInput = document.getElementById('data-quilos')
     let resultado = quilos / (metros * metros)
     let resultadoFixado = resultado.toFixed(1)
     let imprimir = document.getElementById('resultado-imc')
     if (metros > 2.51 || metros < 0) {
-        metrosInput.style.border = "1px solid red";
+        tremerMetros()
         imprimir.style.color = "#fff"
         return imprimir.innerHTML = `Digite uma altura valida`
     }  else if (quilos > 600 || quilos < 0) {
-        quilosInput.style.border = "1px solid red";
+        tremerQuilos()
         imprimir.style.color = "#fff"
         return imprimir.innerHTML = `Digite um peso valido`
     } else {
@@ -52,6 +50,32 @@ function calcularIMC () {
         }
     } 
 }
-
+function tremerMetros() {
+    let metros = document.getElementById('data-metros')
+    metros.style.border = "1px solid red";
+    metros.animate([
+        { transform: 'translateX(-5px)'},
+        { transform: 'translateX(5px)'},
+        { transform: 'translateX(-5px)'},
+        { transform: 'translateX(5px)'},
+        { transform: 'translateX(0px)'}
+    ], {
+        duration: 500
+    });
+    
+}
+function tremerQuilos() {
+    let quilos = document.getElementById('data-quilos')
+    quilos.style.border = "1px solid red";
+    quilos.animate([
+        { transform: 'translateX(5px)'},
+        { transform: 'translateX(-5px)'},
+        { transform: 'translateX(5px)'},
+        { transform: 'translateX(-5px)'},
+        { transform: 'translateX(0px)'}
+    ], {
+        duration: 500
+    });
+}
 const a = document.querySelector('[calcular-imc]')
 a.onclick = validar
