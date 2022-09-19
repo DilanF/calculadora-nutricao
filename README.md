@@ -8,10 +8,10 @@ O projeto possui uma caluladora de IMC e uma de Gasto Enérgetico para acelerar 
 
 ## 🖥️ Tecnologias
 
--HTML
--CSS
--Javascript
--Git e Github
+- HTML
+- CSS
+- Javascript
+- Git e Github
 
 ## 😊 Contato
 
