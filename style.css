@@ -1,5 +1,5 @@
 body {
-    background-color: #eee;
+    background-color: #FFF7F5;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
@@ -13,7 +13,7 @@ header {
     grid-column: 1 / 3;
     padding: 15px;
     text-align: center;
-    background: linear-gradient(90deg, #C850C0 0%, #FFCC70 100%);
+    background: #F4D2BD;
     width: 100%;
     box-sizing: border-box;
     ALIGN-SELF: baseline;
@@ -50,7 +50,7 @@ header h1 {
     margin: 10px 0px;
 }
 .data-input > button {
-    background-color: #C850C0;
+    background-color: #F4D2BD;
     width: 110px;
     padding: 3px;
     margin-top: 10px;
@@ -67,7 +67,7 @@ header h1 {
 }
 .data-input > button:hover {
     transition: 0.2s;
-    background-color: #FFCC70;
+    background-color: #E7B1A6;
 }
 
 .input-cne{
@@ -135,7 +135,7 @@ header h1 {
 }
 #botao-cne {
     align-self: flex-end;
-    background-color: #C850C0;
+    background-color: #F4D2BD;
     width: 110px;
     padding: 3px;
     margin-top: 10px;
@@ -148,7 +148,7 @@ header h1 {
 }
 #botao-cne:hover {
     transition: 0.2s;
-    background-color: #FFCC70;
+    background-color: #E7B1A6;
 }
 .input-cne h3 {
     text-align: left;
